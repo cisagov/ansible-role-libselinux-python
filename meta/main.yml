@@ -10,6 +10,7 @@ galaxy_info:
       versions:
         - 29
   galaxy_tags:
-    - libselinux-python
+    - libselinux
+    - python
 
 dependencies: []

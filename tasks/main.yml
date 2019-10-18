@@ -1,2 +1,8 @@
 ---
-# tasks file for skeleton
+# tasks file for libselinux-python
+
+- name: Install libselinux-python
+  package:
+    name:
+      - libselinux-python
+    state: present

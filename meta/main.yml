@@ -1,19 +1,15 @@
 ---
 galaxy_info:
-  author: First Last
-  description: Skeleton Ansible role
+  author: David Redmin
+  description: Ansible role to install libselinux-python package
   company: CISA Cyber Assessments
   license: CC0
   min_ansible_version: 2.0
   platforms:
-    - name: Debian
+    - name: Fedora
       versions:
-        - stretch
-        - buster
-    - name: Amazon
-      versions:
-        - 2018.03
+        - 29
   galaxy_tags:
-    - skeleton
+    - libselinux-python
 
 dependencies: []

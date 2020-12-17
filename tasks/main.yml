@@ -1,8 +1,18 @@
 ---
 # tasks file for libselinux-python
 
+- name: Load var file with package names based on the OS type
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}_{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+      paths:
+        - "{{ role_path }}/vars"
+
 - name: Install libselinux-python
   package:
     name:
-      - libselinux-python
-    state: present
+      "{{ package_names }}"

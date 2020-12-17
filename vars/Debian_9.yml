@@ -1,0 +1,5 @@
+---
+# The Python SELinux bindings package name
+package_names:
+  - python-selinux
+  - python3-selinux

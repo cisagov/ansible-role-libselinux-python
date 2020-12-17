@@ -1,0 +1,4 @@
+---
+# The Python SELinux bindings package name
+package_names:
+  - libselinux-python

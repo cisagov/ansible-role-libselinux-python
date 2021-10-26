@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  roles:
-    - role: ansible-role-libselinux-python
+  tasks:
+    - name: Include ansible-role-libselinux-python
+      ansible.builtin.include_role:
+        name: ansible-role-libselinux-python

@@ -35,7 +35,7 @@ Here's how to use it in a playbook:
   tasks:
     - name: Install libselinux-python
       ansible.builtin.include_role:
-        name: libselinux-python
+        name: libselinux_python
 ```
 
 ## Contributing ##

@@ -1,8 +1,7 @@
 # ansible-role-libselinux-python #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-libselinux-python/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-libselinux-python/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-libselinux-python.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-libselinux-python/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-libselinux-python.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-libselinux-python/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-libselinux-python/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-libselinux-python/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role for installing the libselinux-python package.
 
@@ -33,8 +32,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - libselinux-python
+  tasks:
+    - name: Install libselinux-python
+      ansible.builtin.include_role:
+        name: libselinux_python
 ```
 
 ## Contributing ##

@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: David Redmin
-  description: Ansible role to install libselinux-python package
   company: CISA Cyber Assessments
+  description: Ansible role to install libselinux-python package
   galaxy_tags:
     - libselinux
     - python
@@ -29,7 +30,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -38,5 +38,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: libselinux_python
-
-dependencies: []

@@ -36,8 +36,8 @@ where `requirements.yml` looks like:
 
 ```yaml
 ---
-- name: skeleton
-  src: https://github.com/cisagov/skeleton-ansible-role
+- name: libselinux_python
+  src: https://github.com/cisagov/ansible-role-libselinux-python
 ```
 
 and may contain other roles as well.

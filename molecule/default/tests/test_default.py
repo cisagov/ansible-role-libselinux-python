@@ -14,25 +14,15 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 def test_packages(host):
     """Test that the appropriate packages were installed."""
     pkgs = None
-    print()
-    if (
-        host.system_info.distribution == "debian"
-        and host.system_info.codename == "stretch"
-    ):
-        pkgs = ["python-selinux", "python3-selinux"]
-    elif (
-        host.system_info.distribution == "debian"
-        or host.system_info.distribution == "ubuntu"
-        or host.system_info.distribution == "kali"
-    ):
+    if host.system_info.distribution in ["debian", "ubuntu", "kali"]:
         pkgs = ["python3-selinux"]
-    elif host.system_info.distribution == "fedora":
+    elif host.system_info.distribution in ["fedora"]:
         pkgs = ["python3-libselinux"]
-    elif host.system_info.distribution == "amzn":
+    elif host.system_info.distribution in ["amzn"]:
         pkgs = ["libselinux-python"]
     else:
         # This is an unknown OS, so force the test to fail
-        assert False
+        assert False, f"Unknown distribution {host.system_info.distribution}"
 
     for pkg in pkgs:
         assert host.package(pkg).is_installed

@@ -16,10 +16,8 @@ def test_packages(host):
     pkgs = None
     if host.system_info.distribution in ["debian", "ubuntu", "kali"]:
         pkgs = ["python3-selinux"]
-    elif host.system_info.distribution in ["fedora"]:
+    elif host.system_info.distribution in ["amzn", "fedora"]:
         pkgs = ["python3-libselinux"]
-    elif host.system_info.distribution in ["amzn"]:
-        pkgs = ["libselinux-python"]
     else:
         # This is an unknown OS, so force the test to fail
         assert False, f"Unknown distribution {host.system_info.distribution}"

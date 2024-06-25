@@ -12,7 +12,7 @@ galaxy_info:
   galaxy_tags:
     - libselinux
     - python
-  license: CC0
+  license: CC0-1.0
   # With the release of version 2.10, Ansible finally correctly
   # identifies Kali Linux as being the Kali distribution of the Debian
   # OS family.  This simplifies a lot of things for roles that support
@@ -21,11 +21,9 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
-    # Amazon Linux 2023 does not offer a libselinux package for
-    # Python.
-    # - name: Amazon Linux
-    #   versions:
-    #     - "2023"
+    - name: Amazon Linux
+      versions:
+        - "2023"
     - name: Debian
       versions:
         - buster
@@ -34,8 +32,8 @@ galaxy_info:
         - trixie
     - name: Fedora
       versions:
-        - "38"
         - "39"
+        - "40"
     - name: Kali
       versions:
         - "2023"
@@ -43,5 +41,6 @@ galaxy_info:
       versions:
         - focal
         - jammy
+        - noble
   role_name: libselinux_python
   standalone: true

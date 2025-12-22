@@ -1,6 +1,7 @@
 # ansible-role-libselinux-python #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-libselinux-python/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-libselinux-python/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-libselinux-python)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-libselinux-python/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-libselinux-python/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role for installing the libselinux-python package.
